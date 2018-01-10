@@ -1,0 +1,22 @@
+{
+  "name": "stellar-wallet-cli",
+  "version": "0.0.1",
+  "description": "Stellar wallet, command line tool",
+  "bin": "bin/cmd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lunik/stellar-wallet-cli"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "argparse": "^1.0.9",
+    "chalk": "^2.3.0",
+    "crypto-js": "^3.1.9-1",
+    "inquirer": "^5.0.0",
+    "stellar-sdk": "^0.8.0"
+  }
+}
