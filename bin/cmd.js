@@ -19,6 +19,7 @@ var args = parser.parseArgs()
 console.log(StellarLogo)
 
 CreateAppDir()
+InitialiseNewtork()
 Menu()
 
 function CreateAppDir () {
@@ -32,4 +33,10 @@ function CreateAppDir () {
       throw Error(`Cannot create App Directory in ${home}`)
     }
   }
+}
+
+function InitialiseNewtork () {
+  process.env['NET'] = 'public' //'test' // or public
+  process.env['NET_SERVER'] = 'https://horizon.stellar.org' //'https://horizon-testnet.stellar.org' //horizon.stellar.org
+  process.env['MIN_BALANCE'] = 20
 }
