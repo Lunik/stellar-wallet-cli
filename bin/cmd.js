@@ -6,7 +6,6 @@ const os = require('os')
 const path = require('path')
 
 const StellarLogo = require('../static/stellarIcon')
-const Menu = require('../lib/menu')
 
 var parser = new ArgumentParser({
   version: '0.0.1',
@@ -14,12 +13,21 @@ var parser = new ArgumentParser({
   description: 'Argparse example'
 })
 
+parser.addArgument(['--question', '-q'], {
+  help: 'Format of questions. input or list',
+  defaultValue: 'input',
+  choices: ['input', 'list'],
+  dest: 'question_format'
+})
+
 var args = parser.parseArgs()
 
 console.log(StellarLogo)
 
 CreateAppDir()
-InitialiseNewtork()
+Initialise(args)
+
+const Menu = require('../lib/menu')
 Menu()
 
 function CreateAppDir () {
@@ -35,7 +43,8 @@ function CreateAppDir () {
   }
 }
 
-function InitialiseNewtork () {
+function Initialise (args) {
+  process.env['QUESTION_FORMAT'] = args.question_format
   process.env['NET'] = 'public' //'test' // or public
   process.env['NET_SERVER'] = 'https://horizon.stellar.org' //'https://horizon-testnet.stellar.org' //horizon.stellar.org
   process.env['MIN_BALANCE'] = 20
