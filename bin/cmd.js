@@ -39,4 +39,5 @@ function InitialiseNewtork () {
   process.env['NET'] = 'public' //'test' // or public
   process.env['NET_SERVER'] = 'https://horizon.stellar.org' //'https://horizon-testnet.stellar.org' //horizon.stellar.org
   process.env['MIN_BALANCE'] = 20
+  process.env['ACCOUNT_FILE'] = path.join(process.env['HOME'], 'account.txt')
 }
