@@ -14,10 +14,17 @@ var parser = new ArgumentParser({
 })
 
 parser.addArgument(['--question', '-q'], {
-  help: 'Format of questions. input or list',
-  defaultValue: 'input',
-  choices: ['input', 'list'],
+  help: 'Format of questions. command or list',
+  defaultValue: 'command',
+  choices: ['command', 'list'],
   dest: 'question_format'
+})
+
+parser.addArgument(['--network', '-n'], {
+  help: 'Network to use. test or public',
+  defaultValue: 'public',
+  choices: ['test', 'public'],
+  dest: 'network'
 })
 
 var args = parser.parseArgs()
@@ -45,8 +52,8 @@ function CreateAppDir () {
 
 function Initialise (args) {
   process.env['QUESTION_FORMAT'] = args.question_format
-  process.env['NET'] = 'public' //'test' // or public
-  process.env['NET_SERVER'] = 'https://horizon.stellar.org' //'https://horizon-testnet.stellar.org' //horizon.stellar.org
+  process.env['NET'] = args.network
+  process.env['NET_SERVER'] = args.network == 'public' ? 'https://horizon.stellar.org' : 'https://horizon-testnet.stellar.org'
   process.env['MIN_BALANCE'] = 20
   process.env['ACCOUNT_FILE'] = path.join(process.env['HOME'], 'account.txt')
 }
