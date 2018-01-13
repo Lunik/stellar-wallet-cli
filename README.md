@@ -3,7 +3,7 @@
 # TODO
 
 ## Account
-- Modify inflation pool
+- ~~Modify inflation pool~~
 
 ## Transaction
 - Send money

@@ -53,7 +53,7 @@ function CreateAppDir () {
 function Initialise (args) {
   process.env['QUESTION_FORMAT'] = args.question_format
   process.env['NET'] = args.network
-  process.env['NET_SERVER'] = args.network == 'public' ? 'https://horizon.stellar.org' : 'https://horizon-testnet.stellar.org'
+  process.env['NET_SERVER'] = args.network === 'public' ? 'https://horizon.stellar.org' : 'https://horizon-testnet.stellar.org'
   process.env['MIN_BALANCE'] = 20
   process.env['ACCOUNT_FILE'] = path.join(process.env['HOME'], 'account.txt')
 }
