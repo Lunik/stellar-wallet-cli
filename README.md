@@ -1,11 +1,22 @@
 # Stellar-Wallet
+Open source command line client for stellar wallet. It allow you to manage your wallet send transaction.
 
-# TODO
+[![asciicast](https://asciinema.org/a/157216.png)](https://asciinema.org/a/157216)
 
-## Account
-- ~~Modify inflation pool~~
+## Features
 
-## Transaction
-- Send money
-- Track transaction history
-- Show detail about 1 transaction
+- [x] Generate account
+- [x] Import existing account
+- [x] Change inflation destination
+- [x] Checkout wallet's informations
+- [x] Send lumens
+- [ ] Show transactions list
+- [ ] Show detailed transaction
+
+## Installation
+
+`$ npm install -g stellar-wallet-cli`
+
+## Usage
+
+`$ stellar-wallet-cli`

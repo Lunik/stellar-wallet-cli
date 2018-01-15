@@ -5,6 +5,10 @@ const fs = require('fs')
 const os = require('os')
 const path = require('path')
 
+process.on('warning', (w) => {
+
+})
+
 const StellarLogo = require('../static/stellarIcon')
 
 var parser = new ArgumentParser({
