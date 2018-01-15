@@ -15,8 +15,8 @@ Open source command line client for stellar wallet. It allow you to manage your 
 
 ## Installation
 
-`$ npm install -g stellar-wallet-cli`
+`$ npm install -g stellar-wallet`
 
 ## Usage
 
-`$ stellar-wallet-cli`
+`$ stellar-wallet`
