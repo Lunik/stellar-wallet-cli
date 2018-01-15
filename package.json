@@ -1,5 +1,5 @@
 {
-  "name": "stellar-wallet-cli",
+  "name": "stellar-wallet",
   "version": "0.0.3",
   "description": "Stellar wallet, command line tool",
   "bin": "bin/cmd.js",
