@@ -5,13 +5,15 @@ Open source command line client for stellar wallet. It allow you to manage your 
 
 ## Features
 
-- [x] Generate account
-- [x] Import existing account
-- [x] Change inflation destination
-- [x] Checkout wallet's informations
-- [x] Send lumens
-- [ ] Show transactions list
-- [ ] Show detailed transaction
+- Generate account
+- Import existing account
+- Change inflation destination
+- Checkout wallet's informations
+- Send lumens
+
+## Todo
+- Show transactions list
+- Show detailed transaction
 
 ## Installation
 
