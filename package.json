@@ -11,7 +11,7 @@
     "type": "git",
     "url": "https://github.com/Lunik/stellar-wallet-cli"
   },
-  "author": "",
+  "author": "Lunik",
   "license": "ISC",
   "dependencies": {
     "argparse": "^1.0.9",
