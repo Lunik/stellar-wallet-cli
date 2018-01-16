@@ -10,10 +10,11 @@ Open source command line client for stellar wallet. It allow you to manage your 
 - Change inflation destination
 - Checkout wallet's informations
 - Send lumens
-
-## Todo
 - Show transactions list
 - Show detailed transaction
+
+## Todo
+[Open Issue](https://github.com/Lunik/stellar-wallet-cli/issues) if you want to see something in the app.
 
 ## Installation
 
