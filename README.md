@@ -1,4 +1,6 @@
 # Stellar-Wallet
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Lunik/stellar-wallet-cli.svg)](https://greenkeeper.io/)
 Open source command line client for stellar wallet. It allow you to manage your wallet send transaction.
 
 [![asciicast](https://asciinema.org/a/157216.png)](https://asciinema.org/a/157216)
