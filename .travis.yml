@@ -1,23 +1,28 @@
 notifications:
   email: false
 language: node_js
-
 node_js:
 - '9'
 - '8'
 - '7'
-
 cache:
   directories:
-  - $(pwd)/node_modules
-
+  - "$(pwd)/node_modules"
 script:
-  - npm run build
-
+- npm run build
 deploy:
-  provider: npm
-  email: guillaume.lunik@gmail.com
-  on:
-    tags: true
-  api_key:
-    secure: GBIozR0eDh7GACQ2ijOZhHfHpQx/WbRnTlDIvwOUxavrTk/ek5NqV8M3KTv+NxuxylFQq6HvAu96yAnZisXAvR2Btvy3PLuow6A4qbodPrajwrCAca3ZaKxluQ65cihri9yZroECXPPMRCDsMRVUjpF+wXP4MMxrzcsPX9jt4VQfaz4YRmqVFzndGd6zWKZ/WgHZAyjWwNlQz2xA15hnyUgkeeWYZAmJV085K2JzuU1Ucr14ITcFdXEShZXccWGtiygH9rEcTaVGk8wPyYSmUL8R0VBQN5LWEqFyxONWfimJjtp6QJa3p/Uv9ODgDDiDtcSuyG0zHOb48HfIvoEXf8uauNVXHppc0JkjYiLvvKO6h2oW8ll46E5PfTRCBvjr3IAM2lnok9yPtFaLniBCsQuGj7ac2cAUCQMu4bEowk5Mbrt8yT6WWaBuYetSvspCTj5F1LdcP4TJMPebJpvfyiHhlcU2eKi/0cSfT/7CHlbpnybb3MrXn2BjMVYSrR4yBTeMn5b7bmyejgtZvYNGipDyoab5WFLd5gmgLy/EjVZrwJSX4vtSP6tZE+AkJjhn6RSQpQX7NAsW+4HzLyj0JdJWkrGJkp0JNRx/jwIdYDtosnzXH2DxfQ4Wv22Kd+uKW5h8Cytu6ViCir/2QniqcfAE5NleCtL5GNSvRliLyDU=
+  - provider: releases
+    api_key:
+      secure: Lf69OGrQktOnOu4oteuv7yM3PoMPPONnZVcoWz/eS2opVbVRmcAa1ZZqwWF5r7O929f667z+0NQOIMEPOE0HnQZdC6ef3/dNE7ZjYTSGFaSgaMm0FZqPTYNCweg/D6EV7FZacv9sO5iecF1freKYVaX0ipNyNtupWuMJ/VqZ/dmCZ6FThXQ5rKIw759KxgkFkU8sA2elhzlPsyGL8mvTwgy5GCBBUflgQzKkKL+JfdMhg8COzyin78Zx26TElooMCSvUosJ4jzqyeEqVxnEArG773SzvCWuyB3kNWGKp4RL8UCCTZ/pzUxJGAnX0QPljyEaG25p6brenCue3XPWAfCej/0VG7AraA9Ke8F2aAg+NRo1yJSY81XZlAHwV3UV8VHf6hYoUQFtvIvn2HJv/EnPybCtF2EC75Egbn+awnT9MDeVA4wdBjSkbMO41pV0c4KVoACwaa7HI41QiZNQ283yCwWJN34MHqa6pfUyFZp0qS1UHpYMwr1uz3i0hjZ68YjgFAzJxJZBzjDmnSDHD4gTEhsnJKcsKEONVkh30zd/n/ePzt8xRZe0RNh0Vg0JYZDgwqR2Pw/Js6c3SDDEzXT0Q3D3cEnLxFyno6MQkXmBQfO1XuACi0mmd6MxnFUTczDz69GswhHhE2eRmwkrtseOMWn1Qu6ahEOQHzuCmRpg=
+    file: build/*
+    file_glob: true
+    skip_cleanup: true
+    on:
+      tags: true
+
+  - provider: npm
+    email: guillaume.lunik@gmail.com
+    on:
+      tags: true
+    api_key:
+      secure: GBIozR0eDh7GACQ2ijOZhHfHpQx/WbRnTlDIvwOUxavrTk/ek5NqV8M3KTv+NxuxylFQq6HvAu96yAnZisXAvR2Btvy3PLuow6A4qbodPrajwrCAca3ZaKxluQ65cihri9yZroECXPPMRCDsMRVUjpF+wXP4MMxrzcsPX9jt4VQfaz4YRmqVFzndGd6zWKZ/WgHZAyjWwNlQz2xA15hnyUgkeeWYZAmJV085K2JzuU1Ucr14ITcFdXEShZXccWGtiygH9rEcTaVGk8wPyYSmUL8R0VBQN5LWEqFyxONWfimJjtp6QJa3p/Uv9ODgDDiDtcSuyG0zHOb48HfIvoEXf8uauNVXHppc0JkjYiLvvKO6h2oW8ll46E5PfTRCBvjr3IAM2lnok9yPtFaLniBCsQuGj7ac2cAUCQMu4bEowk5Mbrt8yT6WWaBuYetSvspCTj5F1LdcP4TJMPebJpvfyiHhlcU2eKi/0cSfT/7CHlbpnybb3MrXn2BjMVYSrR4yBTeMn5b7bmyejgtZvYNGipDyoab5WFLd5gmgLy/EjVZrwJSX4vtSP6tZE+AkJjhn6RSQpQX7NAsW+4HzLyj0JdJWkrGJkp0JNRx/jwIdYDtosnzXH2DxfQ4Wv22Kd+uKW5h8Cytu6ViCir/2QniqcfAE5NleCtL5GNSvRliLyDU=
