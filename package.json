@@ -1,6 +1,6 @@
 {
   "name": "stellar-wallet",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Stellar wallet, command line tool",
   "bin": "bin/cmd.js",
   "scripts": {
